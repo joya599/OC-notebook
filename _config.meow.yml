@@ -36,7 +36,7 @@ global:
     type: uc # Icon Style Type, uc or ta or other custom collection
   selectable: true # Whether users can select text
   # Change page title when page onblur, false or onblur title text
-  onblur_title: "我还在这里哦～✧(´▽`ʃ♡ƪ)"
+  onblur_title: "粥粥粥粥粥✧(´▽`ʃ♡ƪ)"
   mouse_click_style: true # Whether to display colorful heart when clicking
 
 # Font Customization
@@ -343,17 +343,17 @@ comment:
     - https://registry.npmmirror.com/@waline/emojis/1.3.0/files/tw-emoji
     # https://waline.js.org/guide/features/emoji.html
     reaction: 
-    - https://a1.ax1x.com/2026/07/09/FVpUX.jpg
-    - https://a1.ax1x.com/2026/07/09/FVq0e.jpg
-    - https://a1.ax1x.com/2026/07/09/FVtIh.jpg
-    - https://a1.ax1x.com/2026/07/09/FVeQC.jpg
+    - https://i.postimg.cc/L86g4x4R/cheers.png
+    - https://i.postimg.cc/Jz4H7p7G/heart.png
+    - https://i.postimg.cc/VkL0sKsN/shy.png
+    - https://i.postimg.cc/rwFRyfyw/cry.png
   
     # https://waline.js.org/guide/features/reaction.html
     option:
         dark: auto
         locale:
             placeholder: '欢迎评论~ 如果评论不成功的话可能需要用🪜QAQ'
-            reactionTitle: '点个表情支持我吧！'
+            reactionTitle: '点个表情支持我吧！' 
         commentSorting: 'hottest'
         requiredMeta: ['nick', 'mail'] # Custom other Waline options, https://waline.js.org/reference/client/props.html
 
