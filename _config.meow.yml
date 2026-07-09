@@ -364,7 +364,7 @@ album:
 # Music Player Module
 music:
   enable: true # Whether to enable global music player
-  autoplay: true # Whether to play music automatically
+  autoplay: false # Whether to play music automatically
   loop: all # How to loop music, all or one or none
   order: list # Play Music in which order, list or random
   volume: 0.7 # Default volume, 0-1
