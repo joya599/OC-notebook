@@ -84,4 +84,35 @@
     != importJS('artitalk','3.3.4','artitalk.js')
     != partial('components/essay/artitalk', {}, {cache: true})
 
-  != js({src: 'js/main', type: 'module'})
+  != js({src: 'js/main', type: 'module'}) 
+
+  //- ================= 以下是为 Barba.js 注入的无刷新控制逻辑 =================
+  script(src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.7")
+  script.
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof barba === 'undefined') return;
+
+      barba.init({
+        timeout: 5000,
+        transitions: [{
+          name: 'base-transition',
+          leave(data) {},
+          enter(data) {}
+        }]
+      });
+
+      // 每次无刷新局部切页完成后触发
+      barba.hooks.after((data) => {
+        console.log('Barba 页面无刷新切换完成！');
+        
+        // 1. 重载 Waline 评论系统（防止切页后评论区变空白）
+        if (typeof initWaline === 'function') {
+          initWaline();
+        }
+
+        // 2. 强行重载图片懒加载（防止新文章里的图片加载不出来）
+        if (typeof LazyLoad === 'function') {
+          new LazyLoad();
+        }
+      });
+    });
