@@ -95,36 +95,46 @@ const initTOCHighlight = () => {
   const toc = document.querySelector('.toc-content');
   if (!toc) return;
 
-  let titleList = [];
   const tocList = document.querySelectorAll('.toc-list-link');
+  
   tocList.forEach(item => {
-    titleList.push(document.getElementById(decodeURI(item.getAttribute("href")).replace("#", "")));
-  });
+    const href = item.getAttribute("href");
+    if (!href) return;
+    
+    // 获取真实的 DOM 元素
+    const section = document.getElementById(decodeURI(href).replace("#", ""));
+    
+    // 关键修复：只有当 section 确实存在时才进行观察
+    if (section) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            let titleId = entry.target.id;
+            tocList.forEach(link => { link.removeAttribute('active') });
+            
+            // 安全地查询目标 TOC 链接
+            let targetToc = document.querySelector(`.toc-list-link[href='${"#" + encodeURI(titleId)}']`);
+            if (!targetToc) return; // 防止找不到目标的情况
+            
+            targetToc.setAttribute('active', '');
 
-  titleList.forEach(section => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          let titleId = entry.target.id;
-          tocList.forEach(link => { link.removeAttribute('active') });
-          let targetToc = document.querySelector(`.toc-list-link[href='${"#" + encodeURI(titleId)}']`);
-          targetToc.setAttribute('active', '');
-
-          let targetView = targetToc.getBoundingClientRect();
-          let tocView = toc.getBoundingClientRect();
-          if (targetView.top >= (tocView.top + tocView.height)) {
-            requestAnimationFrame(() => {
-              toc.scrollTop += 35;
-            });
-          } else if (targetView.top <= tocView.top) {
-            requestAnimationFrame(() => {
-              toc.scrollTop -= 35;
-            });
+            // 滚动 TOC 容器逻辑
+            let targetView = targetToc.getBoundingClientRect();
+            let tocView = toc.getBoundingClientRect();
+            if (targetView.top >= (tocView.top + tocView.height)) {
+              requestAnimationFrame(() => { toc.scrollTop += 35; });
+            } else if (targetView.top <= tocView.top) {
+              requestAnimationFrame(() => { toc.scrollTop -= 35; });
+            }
           }
-        }
-      });
-    }, { threshold: [1], rootMargin: '-10% 0% -60%' });
-    observer.observe(section);
+        });
+      }, { threshold: [1], rootMargin: '-10% 0% -60%' });
+      
+      observer.observe(section);
+    } else {
+      // 调试用：可选，如果某个目录链接找不到对应的内容，可以在控制台输出
+      // console.warn('找不到对应标题内容:', href);
+    }
   });
 }
 
