@@ -124,3 +124,10 @@ markdown:
     - markdown-it-footnote # 脚注[^]
     - markdown-it-emoji
   
+#加密功能
+encrypt:
+  decryptButton:
+    show: true
+    text: 🔑解锁
+  kdf:
+    iterations: 600000
