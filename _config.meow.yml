@@ -57,7 +57,7 @@ menu:
      tags: /tags || uc-tag
    about || uc-about:
     世界: /world || uc-site
-    作者: /author || uc-face
+    作者: /profile || uc-face
    相册: /gallery || uc-picture
 
 # Navigation Bar Configuration
