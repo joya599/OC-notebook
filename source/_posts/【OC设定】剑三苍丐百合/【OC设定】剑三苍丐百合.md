@@ -33,11 +33,13 @@ status:
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
+
 .character-header {
   display: flex;
   gap: 35px;
   align-items: flex-start;
 }
+
 
 .character-avatar img {
   width: 230px;
@@ -47,9 +49,11 @@ status:
   box-shadow: 0 5px 15px rgba(0,0,0,.15);
 }
 
+
 .character-basic {
   flex: 1;
 }
+
 
 .character-quote {
   font-style: italic;
@@ -58,22 +62,37 @@ status:
   margin-bottom: 25px;
 }
 
-.character-basic table {
+
+.character-card table {
   width: 100%;
+  table-layout: fixed;
 }
 
-.character-basic td {
-  padding: 8px;
+
+.character-card td,
+.character-card th {
+  padding: 8px 20px;
+  word-break: break-word;
+  white-space: normal;
+  vertical-align: top;
+  line-height: 1.5;
 }
+
+
+.character-card p {
+  margin: 8px 0;
+}
+
 
 .character-details {
-  margin-top: 35px;
+  margin-top: 15px;
   line-height: 1.9;
 }
 
+
 .character-details h3 {
-  margin-top: 20px;
-  padding-left: 12px;
+  margin-top: 15px !important;
+  padding-left: 12px !important;
   border-left: 4px solid currentColor;
 }
 
@@ -84,12 +103,14 @@ status:
   flex-direction: column;
 }
 
+
 .character-avatar img {
   width:180px;
   height:250px;
 }
 
 }
+
 </style>
 
 
@@ -138,7 +159,7 @@ status:
 <td><b>身高</b></td>
 <td>172cm</td>
 <td><b>喜欢颜色</b></td>
-<td>玄色</td>
+<td>玄色 <br>因为低调实用</td>
 </tr>
 
 </table>
@@ -163,7 +184,7 @@ status:
 | 喜欢 | 讨厌 |
 | --- | --- |
 | 醋、豆腐汤、刀削面 | 太辣的食物 |
-| 秋天（收粮食的季节，红叶很好看，天气也好，天高云淡） | 犹豫不决、优柔寡断 |
+| 秋天。是收粮食的季节。<br>红叶很好看，天气也好，天高云淡 | 犹豫不决、优柔寡断 |
 | 整理 | |
 
 
@@ -171,13 +192,13 @@ status:
 
 理性，果断，严谨。
 是一个温柔细心但严肃的大姐姐，很擅长默默地在恰到好处的时候帮助别人。
-她善于分析，对感情较为迟钝，但一旦意识到自己的心意，就会变得直率坦诚。
+善于分析，对感情较为迟钝，但一旦意识到自己的心意，就会变得直率坦诚。
 
 
 <h3>人物关系</h3>
 
 和郭天是情侣关系。
-燕从安在这段关系中是更被动的一方，但也是更坦率的一方。
+燕从安在这段关系中是更被动但更坦率的一方。
 
 </div>
 
