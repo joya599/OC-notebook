@@ -20,7 +20,7 @@ status:
 
 ----
 
-{% character /images/yanzongan.png '燕从安' '「寒云带飞雪，日暮雁门关。」' %}
+{% character https://cdn.jsdelivr.net/gh/joya599/yrzoc-photo@main/%E7%9B%BE%E5%A8%98%E5%8D%95%E4%BA%BA.webp '燕从安' '「寒云带飞雪，日暮雁门关。」' %}
 
 | | | | |
 | --- | --- | --- | --- |
@@ -60,7 +60,7 @@ status:
 
 ---
 
-{% character /images/guotian.png '郭天' '「浪花有意千里雪，桃花无言一队春。」' %}
+{% character https://cdn.jsdelivr.net/gh/joya599/yrzoc-photo@main/%E4%B8%90%E5%A7%90%E7%83%9F%E9%9B%BE.jpeg '郭天' '「浪花有意千里雪，桃花无言一队春。」' %}
 
 | | | | |
 | --- | --- | --- | --- |
@@ -103,5 +103,8 @@ status:
 {% slider
     https://cdn.jsdelivr.net/gh/joya599/yrzoc-photo@main/%E8%8B%8D%E4%B8%90%E6%8D%A7%E8%84%B8.jpeg;
   小狗咬人  https://cdn.jsdelivr.net/gh/joya599/yrzoc-photo@main/%E8%8B%8D%E4%B8%90%E4%BA%B2%E4%BA%B2.jpeg;
+   https://cdn.jsdelivr.net/gh/joya599/yrzoc-photo@main/%E8%8B%8D%E4%B8%90%E6%AF%94%E4%BE%8B%E4%B8%8D%E5%A4%AA%E5%A5%BD%E7%9A%84%E5%90%88%E7%85%A7.jpeg;
    https://cdn.jsdelivr.net/gh/joya599/yrzoc-photo@main/%E4%B8%90%E5%A7%90%E6%A1%83%E8%8A%B1.jpeg;
+   丐姐年轻时 https://cdn.jsdelivr.net/gh/joya599/yrzoc-photo@main/%E5%B0%8F%E4%B8%90%E5%A7%90.jpeg;
+   
 %}
