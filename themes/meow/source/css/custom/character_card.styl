@@ -1,0 +1,79 @@
+/* ================= 角色卡片全局样式 ================= */
+
+/* 自动加粗基础属性表格的单数列（第1格、第3格） */
+.character-basic table td:nth-child(odd) {
+  font-weight: bold;
+}
+.character-card {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(120,120,120,0.06);
+  border: 1px solid rgba(120,120,120,0.25);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.character-header {
+  display: flex;
+  gap: 35px;
+  align-items: flex-start;
+}
+
+.character-avatar img {
+  width: 230px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+.character-basic {
+  flex: 1;
+}
+
+.character-quote {
+  font-style: italic;
+  opacity: .7;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.character-card table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.character-card td,
+.character-card th {
+  padding: 8px 20px;
+  word-break: break-word;
+  white-space: normal;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.character-card p {
+  margin: 8px 0;
+}
+
+.character-details {
+  margin-top: 15px;
+  line-height: 1.9;
+}
+
+.character-details h3 {
+  margin-top: 15px !important;
+  padding-left: 12px !important;
+  border-left: 4px solid currentColor;
+}
+
+@media(max-width:700px){
+  .character-header {
+    flex-direction: column;
+  }
+  .character-avatar img {
+    width: 180px;
+    height: 250px;
+  }
+}
